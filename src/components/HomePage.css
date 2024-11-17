@@ -1,3 +1,6 @@
+.app{
+  background: linear-gradient(#2d3138,#0056b3,#2d3138);
+}
 .buttons-container {
     display: flex;
     justify-content: center; /* Align buttons horizontally in the center */

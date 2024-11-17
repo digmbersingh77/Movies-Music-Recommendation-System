@@ -5,9 +5,15 @@ import { useNavigate } from 'react-router-dom';
 const HomePage = () => {
     const navigate = useNavigate();
     const handleSignInClick = () => {
-        navigate('/sign-in'); // Programmatically navigate to the /sign-in route
+        navigate('/Signin'); // Programmatically navigate to the /sign-in route
     };
-    
+    const handleMoviesClick = () => {
+       navigate('/Movies');
+    }
+    const handleMusicClick = () => {
+      navigate('/Music');
+   }
+
   return (
     <div className="App">
       <Logo />
@@ -18,8 +24,8 @@ const HomePage = () => {
         <h1>Welcome to the Homepage</h1>
       </div>
         <div className="buttons-container">
-        <button className="button">Movies</button>
-        <button className="button">Music</button>
+        <button onClick={handleMoviesClick} className="button">Movies</button>
+        <button onClick={handleMusicClick} className="button">Music</button>
       </div>
     </div>
   )
