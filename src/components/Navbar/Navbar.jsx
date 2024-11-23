@@ -5,15 +5,11 @@ import search_icon from '../../Assets/search_icon.svg'
 import bell_icon from '../../Assets/bell_icon.svg'
 import profile_img from '../../Assets/profile_img.png'
 import caret_icon from '../../Assets/caret_icon.svg'
-import { useNavigate } from 'react-router-dom';
+
+import { logout } from '../../firebase'
 
 const Navbar = () => {
-    const navigate = useNavigate();
-    const handleSignOut = () => {
-        // Clear any authentication state (e.g., remove token)
-        localStorage.removeItem('authToken'); // Example of removing the token
-        navigate('/'); // Redirect to Sign In page
-      };
+    
   return (
     <div className='navbar'>
         <div className="navbar-left">
@@ -36,7 +32,7 @@ const Navbar = () => {
                 <img src={profile_img} alt="" className='profile'/>
                 <img src={caret_icon} alt="" />
                 <div className="dropdown">
-                    <button onClick={handleSignOut}>Sign Out</button>
+                    <button onClick={()=>{logout()}}>Sign Out</button>
                 </div>
             </div>   
         </div>
