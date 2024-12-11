@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, async (user) => {
       if (user) {
-        navigate('/Movies');
+        navigate('/');
       } else {
         navigate('/SignIn');
       }
